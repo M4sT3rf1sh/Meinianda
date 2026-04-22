@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Meinianda</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/js/controls/OrbitControls.js"></script>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="VS10.png" alt="Meinianda Logo">
+      <span>Meinianda</span>
+    </div>
+    <div class="nav-right">
+      <div class="lang-switch">
+        <button data-lang="vi">VI</button>
+        <button data-lang="en">EN</button>
+      </div>
+      <div id="menu-icon" class="menu-icon">&#9776;</div>
+    </div>
+  </nav>
+
+  <!-- Side menu -->
+  <div id="side-menu" class="side-menu">
+    <ul>
+      <li><a href="#hero" data-lang-key="home">Trang chủ</a></li>
+      <li><a href="#about" data-lang-key="about">Giới thiệu</a></li>
+      <li><a href="#services" data-lang-key="services">Sản phẩm nổi bật</a></li>
+      <li><a href="#projects" data-lang-key="projects">Dự án tiêu biểu</a></li>
+      <li><a href="#contact" data-lang-key="contact">Liên hệ</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero -->
+  <section id="hero" class="hero">
+    <div class="hero-text">
+      <h1 data-lang-key="hero_title">Chào mừng đến với Meinianda</h1>
+      <p data-lang-key="hero_subtitle">Giải pháp sáng tạo và công nghệ cho nhà bếp thông minh</p>
+    </div>
+  </section>
+
+  <!-- Divider image -->
+  <div class="divider-image"><img src="bg1.png" alt="Divider"></div>
+
+  <!-- Giới thiệu -->
+  <section id="about" class="section-full fade-in">
+    <div class="container">
+      <h2 class="section-title" data-lang-key="about_title">Giới thiệu</h2>
+      <p data-lang-key="about_text">Meinianda là đơn vị tiên phong trong lĩnh vực thiết kế website, giải pháp công nghệ và branding cho sản phẩm nhà bếp thông minh.</p>
+    </div>
+  </section>
+
+  <!-- Divider image -->
+  <div class="divider-image"><img src="bg2.png" alt="Divider"></div>
+
+  <!-- Sản phẩm nổi bật -->
+  <section id="services" class="section-full fade-in">
+    <div class="container">
+      <h2 class="section-title" data-lang-key="services_title">Sản phẩm nổi bật</h2>
+      <div class="grid">
+        <div class="card" data-images="p1.jpg,p2_2.png" data-lang-key="product1">Robot nấu tự động</div>
+        <div class="card" data-images="p3.jpg,p3_2.png" data-lang-key="product2">Máy rửa bát công nghiệp</div>
+        <div class="card" data-images="p2.jpg,p1_2.png" data-lang-key="product3">AI thu ngân nhận diện món</div>
+        <div class="card" data-images="p4_4.png" data-lang-key="product4">Nền tảng SAAS quản lý tập trung</div>
+      </div>
+      <a href="#projects" class="cta" data-lang-key="cta_services">Xem chi tiết dịch vụ</a>
+    </div>
+  </section>
+
+  <!-- Popup sản phẩm -->
+  <div id="product-modal" class="modal">
+    <span class="modal-close">&times;</span>
+    <div class="modal-content product-images"></div>
+  </div>
+
+  <!-- Divider image -->
+  <div class="divider-image"><img src="bg3.png" alt="Divider"></div>
+
+  <!-- Dự án tiêu biểu -->
+  <section id="projects" class="section-full fade-in">
+    <div class="container">
+      <h2 class="section-title" data-lang-key="projects_title">Dự án tiêu biểu</h2>
+      <div class="gallery">
+        <div class="gallery-item"><img src="pj1.png" alt="Dự án 1"></div>
+        <div class="gallery-item"><img src="pj2.png" alt="Dự án 2"></div>
+        <div class="gallery-item"><img src="pj3.png" alt="Dự án 3"></div>
+        <div class="gallery-item"><img src="pj4.png" alt="Dự án 4"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal cho gallery -->
+  <div class="modal">
+    <span class="modal-close">&times;</span>
+    <div class="modal-content"><img src="" alt="Project"></div>
+  </div>
+
+  <!-- Divider image -->
+  <div class="divider-image"><img src="bg2.png" alt="Divider"></div>
+
+<!-- Mô hình 3D -->
+<section id="experience-3d" class="section-full fade-in">
+  <div class="container">
+    <h2 class="section-title" data-lang-key="experience_title">
+      Mô hình 3D Trung tâm trải nghiệm bếp thông minh
+    </h2>
+
+    <!-- Model Viewer -->
+    <model-viewer src="Model102.glb"
+      alt="Mô hình 3D bếp thông minh"
+      auto-rotate
+      camera-controls
+      ar
+      style="width:100%; height:500px; background:#111; border-radius:8px;">
+    </model-viewer>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <p data-lang-key="footer_contact">Liên hệ: contact@meinianda.com | Hotline: 363667673667</p>
+    <p data-lang-key="footer_rights">© 2026 美年达. All rights reserved.</p>
+  </footer>
+
+  <!-- Bong bóng nền -->
+  <div class="background-bubbles">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
